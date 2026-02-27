@@ -1,0 +1,12 @@
+{% extends 'lab3/base.html' %}
+
+{% block title %}Головна{% endblock %}
+
+{% block content %}
+<p>{{ message }}</p>
+
+<ul>
+    <li><a href="{% url 'page1' %}">Сторінка 1</a></li>
+    <li><a href="{% url 'page2' %}">Сторінка 2</a></li>
+</ul>
+{% endblock %}
