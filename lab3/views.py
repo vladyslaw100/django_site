@@ -3,6 +3,7 @@ from django.shortcuts import render
 def index(request):
     context = {
         'message': 'Це головна сторінка'
+        
     }
     return render(request, 'lab3/index.html', context)
 
