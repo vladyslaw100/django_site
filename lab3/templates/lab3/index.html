@@ -1,12 +1,23 @@
-{% extends 'lab3/base.html' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My site</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="{% url 'home' %}">Main</a>
+                <a href="{% url 'laptops'%}">Laptops</a>
+            </nav>
+        </header>
 
-{% block title %}Головна{% endblock %}
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
 
-{% block content %}
-<p>{{ message }}</p>
-
-<ul>
-    <li><a href="{% url 'page1' %}">Сторінка 1</a></li>
-    <li><a href="{% url 'page2' %}">Сторінка 2</a></li>
-</ul>
-{% endblock %}
+        <footer>
+            <p>MyFooter</p>
+        </footer>
+    </body>
+</html>

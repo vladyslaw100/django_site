@@ -1,20 +1,11 @@
 from django.shortcuts import render
+from .models import Laptop, People, Delivery
 
-def index(request):
-    context = {
-        'message': 'Це головна сторінка'
-        
-    }
-    return render(request, 'lab3/index.html', context)
+def home(request):
+    items = Laptop.objects.all()
+    return render(request, 'lab3/home.html', {'items': items})
 
-def page1(request):
-    context = {
-        'message': 'Це перша сторінка'
-    }
-    return render(request, 'lab3/page1.html', context)
 
-def page2(request):
-    context = {
-        'message': 'Це друга сторінка'
-    }
-    return render(request, 'lab3/page2.html', context)
+def laptops(request):
+    items = Laptop.objects.all()
+    return render(request, 'lab3/laptops.html', {'items': items})
