@@ -1,13 +1,18 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="uk">
     <head>
-        <title>My site</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'lab3/css/style.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LaptopStore</title>
     </head>
     <body>
         <header>
+            <a href="{% url 'home' %}" class="logo">LaptopStore</a>
             <nav>
                 <a href="{% url 'home' %}">Main</a>
-                <a href="{% url 'laptops'%}">Laptops</a>
+                <a href="{% url 'laptops' %}">Laptops</a>
             </nav>
         </header>
 
@@ -17,7 +22,20 @@
         </main>
 
         <footer>
-            <p>MyFooter</p>
+            <div class="footer-col">
+                <h4>LaptopStore</h4>
+                <p>Best laptops at great prices.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="{% url 'home' %}">Main</a>
+                <a href="{% url 'laptops' %}">Laptops</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>support@laptopstore.com</p>
+            </div>
         </footer>
     </body>
 </html>
+

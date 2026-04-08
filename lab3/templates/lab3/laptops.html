@@ -1,10 +1,16 @@
 {% extends 'lab3/index.html' %}
 
 {% block content %}
-<h1>Laptops</h1>
-<ul>
+
+<h1 class="page-title">Laptops</h1>
+<p class="page-subtitle">{{ items|length }} model{{ items|length|pluralize }} available</p>
+
+<ul class="laptop-list">
     {% for item in items %}
-    <li>{{ item.name }}</li>
+    <li class="laptop-item">💻 {{ item.name }}</li>
+    {% empty %}
+    <p class="empty">No laptops in stock yet. Check back soon.</p>
     {% endfor %}
 </ul>
 {% endblock %}
+

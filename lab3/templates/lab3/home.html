@@ -1,5 +1,29 @@
 {% extends 'lab3/index.html' %}
 
 {% block content %}
-<h1>This is main page</h1>
+
+<h1 class="home-title">Welcome to <span>LaptopStore</span></h1>
+<p class="home-desc">
+    This is the main page of our laptop store. Browse our catalog and find
+    your dream laptop at a great price.
+</p>
+<a href="{% url 'laptops' %}" class="home-btn">Browse Laptops →</a>
+
+<hr class="divider">
+
+<div class="features">
+    <div class="feature">
+        <h3>⚡ Top Performance</h3>
+        <p>Latest processors and fast SSDs in every device.</p>
+    </div>
+    <div class="feature">
+        <h3>💰 Low Prices</h3>
+        <p>Direct from manufacturers — no middleman markup.</p>
+    </div>
+    <div class="feature">
+        <h3>🛡️ Warranty</h3>
+        <p>Official warranty and easy returns on all orders.</p>
+    </div>
+</div>
 {% endblock %}
+
